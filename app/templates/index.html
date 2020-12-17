@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Predictor</title>
+</head>
+<body>
+<h1>Would you have survived on the Titanic?</h1>
+
+
+<form action="/result" method="POST">
+   <label for="age">Your age:</label>
+    <input type="number" id="age" name="age" min="1" max="99">
+    <br><br>
+
+    <label for="male">Your gender:</label>
+    <select name="male" id="male">
+        <option value="1">male</option>
+        <option value="0">female</option>
+    </select>
+    <br><br>
+
+      <label for="class">Ticket class:</label>
+  <select name="class" id="class">
+    <option value="1">1st class</option>
+    <option value="2">2nd class</option>
+    <option value="3">3rd class</option>
+  </select>
+    <br><br>
+
+      <label for="embarked">Boarded in:</label>
+  <select name="embarked" id="embarked">
+    <option value="C">Cherbourg</option>
+    <option value="Q">Queenstown</option>
+    <option value="S">Southampton</option>
+  </select>
+    <br><br>
+
+    <label for="sib">Siblings on board:</label>
+    <input type="number" id="sib" name="sib" min="0" max="9">
+    <br><br>
+
+     <label for="parch">Parents/kids on board:</label>
+    <input type="number" id="parch" name="parch" min="0" max="9">
+    <br><br>
+
+  <br><br>
+  <input type="submit" value="Calculate likelihood of survival" >
+</form>
+
+
+</body>
+</html>
