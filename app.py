@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import pickle
-import pandas as pd
 import numpy as np
 # load the model
 with open('titanic_randomforest.pkl', 'rb') as pkl:
@@ -34,4 +33,4 @@ def result():
       return render_template("result.html",survrate = survivalrate )
 
 if __name__ == '__main__':
-   titanic_app.run(debug = True)
+   titanic_app.run(debug = False)
