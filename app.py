@@ -6,13 +6,13 @@ import numpy as np
 with open('titanic_randomforest.pkl', 'rb') as pkl:
    model = pickle.load(pkl)
 
-app = Flask(__name__)
+titanic_app = Flask(__name__)
 
-@app.route('/')
+@titanic_app.route('/')
 def student():
    return render_template('index.html')
 
-@app.route('/result',methods = ['POST'])
+@titanic_app.route('/result',methods = ['POST'])
 def result():
    if request.method == 'POST':
       age = int(request.form['age'])
@@ -34,4 +34,4 @@ def result():
       return render_template("result.html",survrate = survivalrate )
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   titanic_app.run(debug = True)
