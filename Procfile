@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:titanic_app
+web: gunicorn app:titanic_app
